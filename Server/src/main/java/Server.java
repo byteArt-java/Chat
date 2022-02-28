@@ -125,11 +125,7 @@ public class Server {
         }
 
         int temp1 = maxLine;
-        List<String> list = new ArrayList<>();
-        BufferedReader inPrivate = new BufferedReader(new FileReader("history_" + client.getLogin() + ".txt"));
-        while (inPrivate.ready()){
-            list.add(inPrivate.readLine());
-        }
+        List<String> list = Files.readAllLines(Paths.get("history_" + client.getLogin() + ".txt"));
         for (int i = 0; i < list.size(); i++) {
             if (temp1 == 0){
                 break;
@@ -139,11 +135,7 @@ public class Server {
         }
 
         int temp2 = maxLine;
-        List<String> list2 = new ArrayList<>();
-        BufferedReader inCommon = new BufferedReader(new FileReader("history.txt"));
-        while (inCommon.ready()){
-            list2.add(inCommon.readLine());
-        }
+        List<String> list2 = Files.readAllLines(Paths.get("history.txt"));
         for (int i = 0; i < list2.size(); i++) {
             if (temp2 == 0){
                 break;

@@ -4,3 +4,4 @@ Sergei : Artem Hello Art3
 Sergei : Artem Hello Art4
 Sergei : Artem Hello Art5
 Sergei : Artem Hello Art6
+Sergei : Artem Privet Senio Java Developer Art
